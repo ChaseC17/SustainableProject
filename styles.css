@@ -1,0 +1,1179 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc; /* Soft background color for better readability */
+    color: #333; /* Neutral text color */
+    line-height: 1.6;
+}
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 4em; /* Offset for fixed nav bar */
+}
+
+/* Navigation Bar */
+.top-nav {
+    background-color: #014F86; /* Solid blue */
+    padding: 1em 0;
+    text-align: center;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center links */
+    gap: 2em; /* Space between links */
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Highlight effect */
+    border-radius: 4px;
+}
+
+/* Index Page Header */
+.index-header {
+    background: url('images/image5.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 6em 1em;
+    position: relative;
+}
+
+.index-header .header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.index-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dim the image for text clarity */
+    z-index: 0;
+}
+
+.index-header h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.index-header p {
+    font-size: 1.6em;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Home Sections */
+.home-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    max-width: 1100px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.home-section {
+    flex: 1 1 calc(50% - 1em); /* Two per row */
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5em;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-section h3 {
+    font-size: 1.8em;
+    color: #014F86;
+    margin-bottom: 0.5em;
+}
+
+.home-section p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #555;
+}
+
+.home-section .btn {
+    display: inline-block;
+    background-color: #014F86;
+    color: white;
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.home-section .btn:hover {
+    background-color: #0169b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #014F86;
+    color: white;
+}
+
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center links */
+    gap: 2em; /* Space between links */
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Highlight effect */
+    border-radius: 4px;
+}
+
+/* Slideshow Container */
+.slideshow-header {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Set height to 3/5ths of the viewport */
+    overflow: hidden;
+    margin-top: 4em; /* Offset for fixed nav bar */
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the area */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow-image.active {
+    opacity: 1; /* Show the active image */
+}
+
+/* Dimmed Overlay */
+.slideshow-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for text clarity */
+    z-index: 1;
+}
+
+/* Header Content */
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Above overlay and images */
+    color: white;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 3em; /* Slightly smaller title */
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header-content p {
+    font-size: 1.4em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Section Styling (Introduction, Shopping, Events) */
+section {
+    padding: 2em 0;
+    background-color: #f8f9fa; /* Light gray background for contrast */
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #014F86; /* Matches the blue theme */
+    margin-bottom: 0.5em;
+}
+
+.section-description {
+    margin: 1em auto 2em;
+    max-width: 800px; /* Restrict width for readability */
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Button Styling */
+.button-container {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.important-button {
+    background-color: #014F86; /* Dark blue button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8em 1.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.important-button:hover {
+    background-color: #0169b3; /* Slightly lighter blue on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+.button-subtext {
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #555;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #014F86; /* Matches the header's blue */
+    color: white;
+}
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 2em 0;
+    color: #014F86;
+}
+
+/* Events Container */
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Event Box */
+.event-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Image */
+.event-image {
+    flex: 1 1 300px;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Event Details */
+.event-details {
+    flex: 2 1 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-title {
+    font-size: 1.8em;
+    color: #014F86;
+    margin-bottom: 0.5em;
+}
+
+.event-description {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.event-date,
+.event-location {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 0.5em;
+}
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 4em; /* Offset for fixed nav bar */
+}
+
+/* Navigation Bar */
+.top-nav {
+    background-color: #014F86; /* Solid blue */
+    padding: 1em 0;
+    text-align: center;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center links */
+    gap: 2em; /* Space between links */
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+/* Header Section */
+.intro-header {
+    background: url('images/intro-header.jpg') no-repeat center center/cover; /* Replace with your intro-specific image */
+    color: white;
+    text-align: center;
+    padding: 6em 1em;
+    position: relative;
+}
+
+.intro-header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Main Content */
+.intro-content {
+    max-width: 1100px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.intro-content p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    color: #333;
+}
+
+.intro-content h2 {
+    font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #014F86; /* Blue theme color */
+}
+
+.intro-content ul, .intro-content ol {
+    margin: 1em 0 1.5em 2em;
+    color: #555;
+}
+
+.intro-content li {
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #014F86; /* Matches nav bar */
+    color: white;
+}
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 4em; /* Offset for fixed nav bar */
+}
+
+/* Navigation Bar */
+.top-nav {
+    background-color: #014F86; /* Solid blue */
+    padding: 1em 0;
+    text-align: center;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center links */
+    gap: 2em; /* Space between links */
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Highlight effect */
+    border-radius: 4px;
+}
+
+/* Header Section */
+.about-header {
+    background: url('images/about-header.jpg') no-repeat center center/cover; /* Replace with your About-specific image */
+    color: white;
+    text-align: center;
+    padding: 6em 1em;
+    position: relative;
+}
+
+.about-header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Main Content */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    max-width: 1100px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Left Section (Text) */
+.about-left {
+    flex: 1;
+    padding: 1em;
+    text-align: left;
+}
+
+.about-left h2 {
+    font-size: 2em;
+    color: #014F86; /* Blue theme color */
+    margin-bottom: 1em;
+}
+
+.about-left p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Right Section (Image) */
+.about-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.portrait-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #014F86; /* Matches nav bar */
+    color: white;
+}
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 4em; /* Offset for fixed nav bar */
+}
+
+/* Navigation Bar */
+.top-nav {
+    background-color: #014F86; /* Solid blue */
+    padding: 1em 0;
+    text-align: center;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center links */
+    gap: 2em; /* Space between links */
+}
+
+.top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Highlight effect */
+    border-radius: 4px;
+}
+
+/* Header Section */
+.businesses-header {
+    background: url('images/businesses-header.jpg') no-repeat center center/cover; /* Replace with your Businesses-specific image */
+    color: white;
+    text-align: center;
+    padding: 6em 1em;
+    position: relative;
+}
+
+.businesses-header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Main Content */
+.businesses-list {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+/* Business Row */
+.business-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+/* Left: Business Box */
+.business-box {
+    flex: 1;
+    background-color: #f8f9fa;
+    color: #014F86;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.business-box:hover {
+    background-color: #014F86;
+    color: white;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Right: Business Description */
+.business-description {
+    flex: 3;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.business-description h3 {
+    font-size: 2em;
+    color: #014F86;
+    margin-bottom: 1em;
+}
+
+.business-description p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 1em;
+}
+/* General Header Styling */
+header {
+    color: white;
+    text-align: center;
+    padding: 6em 1em;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Introduction Page Header */
+.intro-header {
+    background: url('images/image1.jpg') no-repeat center center/cover;
+}
+
+/* Businesses Page Header */
+.businesses-header {
+    background: url('images/image2.jpg') no-repeat center center/cover;
+}
+
+/* Events Page Header */
+.events-header {
+    background: url('images/image3.jpg') no-repeat center center/cover;
+}
+
+/* About Page Header */
+.about-header {
+    background: url('images/image4.jpg') no-repeat center center/cover;
+}
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc; /* Soft background color for better readability */
+    color: #333; /* Neutral text color */
+    line-height: 1.6;
+}
+
+/* Navigation Bar Styling */
+.top-nav {
+    display: flex;
+    justify-content: center; /* Centers the navigation links */
+    align-items: center; /* Vertically aligns items */
+    background-color: #014F86; /* Consistent blue color */
+    height: 70px; /* Increases the height of the nav bar */
+    padding: 0 1em; /* Adds spacing inside the nav */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Navigation Links Styling */
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Displays links horizontally */
+    gap: 2em; /* Adds space between links */
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em; /* Increases font size */
+    font-weight: bold; /* Makes the text more prominent */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.top-nav ul li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Header Section for Introduction Page */
+/* Ensure the header fills the top space */
+.intro-header {
+    margin: 0; /* Removes any default margin */
+    padding: 6em 1em; /* Adjust as needed for spacing */
+    background: url('images/image7.jpg') no-repeat center center/cover; /* Ensure the correct image is referenced */
+    color: white;
+    text-align: center;
+    position: relative; /* Keeps the header positioned correctly */
+}
+
+/* Remove margin or padding from the body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Ensures a consistent font */
+}
+
+/* Fix spacing for nav bar */
+.top-nav {
+    margin: 0;
+    padding: 0;
+    position: relative; /* Ensures it stays aligned with the header */
+    z-index: 100; /* Keeps it above the header */
+}
+
+
+.intro-header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Main Content */
+.intro-content {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1.5em;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #014F86;
+    margin-bottom: 1em;
+}
+
+.centered-paragraph {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 1.5em;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #014F86;
+    color: white;
+}
+/* Main Content */
+.intro-content {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1.5em;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #014F86;
+    margin-bottom: 1em;
+}
+
+.centered-paragraph {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 1.5em;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.centered-paragraph a {
+    color: #014F86;
+    text-decoration: none;
+    border-bottom: 1px solid #014F86;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.centered-paragraph a:hover {
+    color: #0169b3;
+    border-bottom: 1px solid #0169b3;
+}
+/* Greenwashing Section */
+.greenwashing-section {
+    margin-top: 3em;
+    padding: 2em;
+    background-color: #f1f1f1; /* Light gray for distinction */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.greenwashing-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.greenwashing-left {
+    flex: 2;
+}
+
+.greenwashing-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.greenwashing-paragraph {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+}
+
+.artsy-box {
+    background: linear-gradient(45deg, #8eb9da, #24c858);
+    color: white;
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.artsy-text {
+    font-style: italic;
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+#business-map {
+    margin-top: 2em;
+    padding: 2em;
+    background-color: #f8f9fa;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-title {
+    font-size: 2em;
+    color: #014F86;
+    margin-bottom: 1em;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+/* Header Section for Events Page */
+.events-header {
+    background: url('images/events-header.jpg') no-repeat center center/cover; /* Replace 'events-header.jpg' with your header image */
+    color: white;
+    text-align: center;
+    padding: 6em 1em;
+    position: relative;
+}
+
+.events-header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+/* About Content Layout */
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 2em; /* Adds space between text and image */
+}
+
+/* Left Section */
+.about-left {
+    flex: 1;
+}
+
+.about-left h2 {
+    font-size: 2em;
+    color: #014F86;
+    margin-bottom: 1em;
+}
+
+.about-left p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Right Section */
+.about-right {
+    flex: 1;
+    text-align: center;
+}
+
+.portrait-image {
+    width: 100%;
+    max-width: 400px; /* Adjust size of the image */
+    height: auto;
+    border-radius: 10px; /* Rounds the edges */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Header Section */
+.about-header {
+    background: url('images/about-me-header.JPEG') no-repeat center center/cover; /* Optional header image */
+    color: white;
+    text-align: center;
+    padding: 6em 1em;
+}
+
+.about-header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+/* Events Section */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    max-width: 1100px;
+    margin: 2em auto;
+}
+
+.event-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(50% - 1em); /* Adjusts to fit 2 per row */
+    max-width: 500px;
+    margin: auto;
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.event-details {
+    padding: 1em;
+    text-align: left;
+}
+
+.event-title {
+    font-size: 1.8em;
+    color: #014F86;
+    margin-bottom: 0.5em;
+}
+
+.event-description, .event-date, .event-location {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.event-date, .event-location {
+    font-weight: bold;
+}
+/* Intro Box for Events Page */
+.events-intro-box {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: #f8f9fa; /* Light gray background */
+    border-left: 6px solid #014F86; /* Blue border for emphasis */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.events-intro-box p {
+    margin: 0;
+}
+/* Intro Box for Businesses Page */
+.businesses-intro-box {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: #f8f9fa; /* Light gray background */
+    border-left: 6px solid #014F86; /* Blue border for emphasis */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.businesses-intro-box p {
+    margin: 0;
+}
+/* Welcome Intro Box for Index Page */
+.welcome-intro-box {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: #f8f9fa; /* Light gray background */
+    border-left: 6px solid #014F86; /* Blue border for emphasis */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.welcome-intro-box p {
+    margin: 0;
+}
+.quiz-container {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.quiz-container h3 {
+    font-size: 2em;
+    color: #014F86;
+    margin-bottom: 1em;
+}
+
+.question {
+    display: none;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.question.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+button {
+    display: block;
+    margin: 0.5em auto;
+    padding: 0.8em 1.5em;
+    font-size: 1em;
+    color: white;
+    background-color: #014F86;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0169b3;
+}
+
+#quiz-result {
+    margin-top: 2em;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#trophy {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em auto;
+    text-align: center;
+}
+
+#trophy img {
+    width: 150px;
+    animation: pop-in 1s ease-in-out;
+}
+
+#trophy p {
+    font-size: 1.5em;
+    color: #014F86;
+    margin-top: 1em;
+}
+
+/* Trophy Animation */
+@keyframes pop-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}

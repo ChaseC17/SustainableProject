@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Businesses - Sustainable Atlantic County</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="businesses.html">Businesses</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <!-- Header Section -->
+    <header class="businesses-header">
+        <h1>Local Sustainable Businesses</h1>
+    </header>
+    <main\>
+        <div class="businesses-intro-box">
+            <p>
+               Click the interactive box with the company name to discover some of Atlantic County's most sustainable thrift stores, boutiques, and more!
+            </p>
+        </div>
+        
+    <!-- Main Content -->
+    <main class="businesses-list">
+        <!-- Business 1 -->
+        <div class="business-row">
+            <a href="https://thearcatlantic.org/thrift-shops/" class="business-box" target="_blank">
+                <h2>The Arc of Atlantic County</h2>
+            </a>
+            <div class="business-description">
+                <h3>About The Arc Makes Cents</h3>
+                <p>
+                    The Arc of Atlantic County operates two thrift shops: "<strong>The Arc Makes Cents</strong>" in Ventnor and "<strong>The Arc Makes Cents, Too</strong>" in Egg Harbor Township. These stores promote sustainable shopping by selling donated, gently used clothing and accessories.
+                </p>
+                <p>
+                    Proceeds from the shops support programs for individuals with intellectual and developmental disabilities while reducing textile waste. Visit <a href="https://thearcatlantic.org/thrift-shops/" target="_blank">their website</a> for more information.
+                </p>
+            </div>
+        </div>
+        
+
+        <!-- Business 2 -->
+        <div class="business-row">
+            <a href="https://www.facebook.com/americanhoneyresaleboutique/" class="business-box" target="_blank">
+                <h2>American Honey Ladies Resale Boutique</h2>
+            </a>
+            <div class="business-description">
+                <h3>About American Honey Ladies Resale Boutique</h3>
+                <p>
+                    Located in Galloway Township, American Honey Ladies Resale offers fashionable clothing at 50-75% off the brand price. The boutique provides a curated shopping experience sorting by size and color for convenience.
+                </p>
+                <p>
+                    Beyond clothing, they feature locally made merchandise, including candles, lip balms, and honey jars, supporting small, woman-owned businesses. Regular customers enjoy perks like punch cards and discounts for military personnel.
+                </p>
+                <p>
+                    Learn more on their <a href="https://www.facebook.com/americanhoneyresaleboutique/" target="_blank">Facebook page</a>.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Business 3 -->
+        <div class="business-row">
+            <a href="https://www.facebook.com/Second-Chance-Thrift-Shop-272986209772540/" class="business-box" target="_blank">
+                <h2>Second Chance Thrift Shop</h2>
+            </a>
+            <div class="business-description">
+                <h3>About Second Chance Thrift Shop</h3>
+                <p>
+                    Located in Egg Harbor Township, NJ, Second Chance Thrift Shop offers a wide range of gently used clothing, accessories, and household items. The shop promotes sustainable shopping by reducing textile waste and extending the life cycle of pre-loved items.
+                </p>
+                <p>
+                    Proceeds from the store support local charitable initiatives, creating a positive impact on the community. Shop, donate, or explore their mission to make a difference.
+                </p>
+                <p>
+                    Learn more on their <a href="https://www.facebook.com/Second-Chance-Thrift-Shop-272986209772540/" target="_blank">Facebook page</a>.
+                </p>
+            </div>
+        </div>
+        
+
+        <!-- Business 4 -->
+        <div class="business-row">
+            <a href="https://www.thedaysapparel.com/" class="business-box" target="_blank">
+                <h2>The Days Sustainable Apparel</h2>
+            </a>
+            <div class="business-description">
+                <h3>About The Days Sustainable Apparel</h3>
+                <p>
+                    Located in Cape May, NJ, The Days Sustainable Apparel offers clothing made from upcycled and plant-based materials. Their collection is hand-designed locally in New Jersey and ethically produced in the USA.
+                </p>
+                <p>
+                    This boutique emphasizes slow fashion, featuring timeless designs that minimize environmental impact. Their mission is to create durable, high-quality pieces that promote sustainable shopping habits.
+                </p>
+                <p>
+                    Learn more about their eco-friendly clothing by visiting <a href="https://maps.google.com/maps/search/The+Days+Sustainable+Apparel%2C+Cape+May%2C+NJ" target="_blank">their page</a>.
+                </p>
+            </div>
+        </div>
+        <section id="business-map">
+            <h2 class="map-title">Find These Businesses on the Map</h2>
+            <div id="map"></div>
+        </section>
+        
+        <script>
+            function initMap() {
+                // Map Center Coordinates (Atlantic County)
+                const mapCenter = { lat: 39.3722, lng: -74.4522 };
+        
+                // Initialize Map
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 10,
+                    center: mapCenter,
+                });
+        
+                // Add Markers
+                const businesses = [
+                    {
+                        name: "The Arc Makes Cents Thrift Shops",
+                        position: { lat: 39.3431, lng: -74.5965 },
+                        url: "https://thearcatlantic.org/thrift-shops/"
+                    },
+                    {
+                        name: "American Honey Ladies Resale Boutique",
+                        position: { lat: 39.4867, lng: -74.5122 },
+                        url: "https://www.facebook.com/americanhoneyresaleboutique/"
+                    },
+                    {
+                        name: "Second Chance Thrift Shop",
+                        position: { lat: 39.4153, lng: -74.5727 },
+                        url: "https://www.facebook.com/Second-Chance-Thrift-Shop-272986209772540/"
+                    },
+                    {
+                        name: "The Days Sustainable Apparel",
+                        position: { lat: 38.9351, lng: -74.9060 },
+                        url: "https://www.thedaysapparel.com/"
+                    },
+                ];
+        
+                businesses.forEach((business) => {
+                    const marker = new google.maps.Marker({
+                        position: business.position,
+                        map: map,
+                        title: business.name,
+                    });
+        
+                    // Info Window
+                    const infoWindow = new google.maps.InfoWindow({
+                        content: `<h3>${business.name}</h3><a href="${business.url}" target="_blank">Visit Website</a>`,
+                    });
+        
+                    // Add Click Listener
+                    marker.addListener("click", () => {
+                        infoWindow.open(map, marker);
+                    });
+                });
+            }
+        </script>
+        <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_TcaxWbjrfozInN0dUvmbsVnhNW98q_8&callback=initMap">
+        </script>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sustainable Atlantic County</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Sustainable Atlantic County</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="businesses.html">Businesses</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="index-header">
+        <div class="header-content">
+            <h1>Sustainable Atlantic County</h1>
+            <p>Your guide to eco-friendly shopping in Atlantic County, NJ</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="welcome-intro-box">
+            <p>
+                Welcome to Sustainable Atlantic County! Our mission is to promote eco-friendly practices in fashion and beyond. Explore our site to discover local businesses, upcoming events, and tips for making sustainable choices in your daily life.
+            </p>
+        </div>
+        
+        <section class="home-sections">
+            <div class="home-section">
+                <h3>Introduction</h3>
+                <p>Learn about sustainable fashion and why it matters.</p>
+                <a href="intro.html" class="btn">Learn More</a>
+            </div>
+            <div class="home-section">
+                <h3>Events</h3>
+                <p>Find eco-friendly events and pop-up shops near you.</p>
+                <a href="events.html" class="btn">Find Events</a>
+            </div>
+            <div class="home-section">
+                <h3>Businesses</h3>
+                <p>Discover local sustainable businesses and boutiques.</p>
+                <a href="businesses.html" class="btn">Explore</a>
+            </div>
+<div class="quiz-container">
+    <h3>Test Your Sustainability Knowledge</h3>
+    <div id="quiz">
+        <div class="question active">
+            <p>1. Which of the following is the most eco-friendly fabric?</p>
+            <button onclick="checkAnswer(1, 'A')">A. Organic Cotton</button>
+            <button onclick="checkAnswer(1, 'B')">B. Polyester</button>
+            <button onclick="checkAnswer(1, 'C')">C. Nylon</button>
+        </div>
+        <div class="question">
+            <p>2. How much water does it take to make one cotton t-shirt?</p>
+            <button onclick="checkAnswer(2, 'A')">A. 500 liters</button>
+            <button onclick="checkAnswer(2, 'B')">B. 2700 liters</button>
+            <button onclick="checkAnswer(2, 'C')">C. 1000 liters</button>
+        </div>
+        <div class="question">
+            <p>3. What percentage of global carbon emissions come from the fashion industry?</p>
+            <button onclick="checkAnswer(3, 'A')">A. 5%</button>
+            <button onclick="checkAnswer(3, 'B')">B. 10%</button>
+            <button onclick="checkAnswer(3, 'C')">C. 15%</button>
+        </div>
+        <div class="question">
+            <p>4. Which of these is an example of greenwashing?</p>
+            <button onclick="checkAnswer(4, 'A')">A. Highlighting one eco-friendly product line but ignoring other unsustainable practices</button>
+            <button onclick="checkAnswer(4, 'B')">B. Transparent labeling with full lifecycle details</button>
+            <button onclick="checkAnswer(4, 'C')">C. Using recycled materials in all products</button>
+        </div>
+        <div class="question">
+            <p>5. How can you reduce your fashion footprint?</p>
+            <button onclick="checkAnswer(5, 'A')">A. Donate or recycle old clothes</button>
+            <button onclick="checkAnswer(5, 'B')">B. Buy secondhand or thrift</button>
+            <button onclick="checkAnswer(5, 'C')">C. All of the above</button>
+        </div>
+    </div>
+    <div id="quiz-result"></div>
+</div>
+
+<!-- Trophy Animation -->
+<div id="trophy" class="hidden">
+    <img src="images/trophy.png" alt="Trophy">
+    <p>Congratulations! You're a sustainability champion!</p>
+</div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sustainable Atlantic County</p>
+    </footer>
+    <script src="quiz.js"></script>
+</body>
+</html>
+
